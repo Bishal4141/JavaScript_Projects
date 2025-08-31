@@ -1,0 +1,154 @@
+:root {
+  --main-bg: #a1cfff; /* Background gradient start - light blue */
+  --main-bg2: #3a7bd5; /* Background gradient end - medium blue */
+  --box-bg: #a1c5faff; /* Converter box background - very light blue */
+  --label-color: #004aad; /* Left label text color - dark blue */
+  --box-shadow: 0 8px 24px rgba(0, 74, 173, 0.3); /* Box shadow with blue tint */
+  --input-bg: #cce0ff; /* Input field bg - pale blue */
+  --input-border: #6699ff; /* Input field border - blue */
+  --input-color: #003d99; /* Input text color - strong blue */
+}
+
+/* Use your own colors below, just overwrite the variables above */
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--main-bg), var(--main-bg2));
+}
+
+
+.container {
+  background: var(--box-bg);
+  border-radius: 18px;
+  box-shadow: var(--box-shadow);
+  padding: 36px 34px 25px 34px;
+  width: 430px;
+  max-width: 98vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-30px); /* Move container up by 30px */
+}
+
+
+.title {
+  font-family: "Segoe UI", monospace;
+  font-size: 2.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+  margin-top: 0;
+  color: var(--label-color);
+  text-align: center;
+}
+
+
+.calculateDOB{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.calculateDOB label {
+  display: inline-block;
+  font-family: "Fira Mono", "Consolas", monospace;
+  font-weight: bold;
+  font-size: 1.75rem;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 1px;
+  color: var(--label-color);
+  margin-bottom: 17px;
+  margin-right: 18px;
+  width: 100%;
+}
+
+.calculateDOB input {
+  width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-family: "Fira Mono", "Consolas", monospace;
+    font-weight: bold;
+    background-color: var(--input-bg);
+    color: var(--input-color);
+    border: 2px solid var(--input-border);
+    border-radius: 7px;
+    margin-bottom: 17px;
+    outline: none;
+    vertical-align: middle;
+    transition: border-color 0.2s;
+}
+
+.calculateDOB input:focus {
+  border-color: var(--label-color);
+}
+
+.calculateDOB button {
+  width: 100%;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    font-family: "Fira Mono", "Consolas", monospace;
+    font-weight: bold;
+    background-color: var(--input-bg);
+    color: var(--input-color);
+    border: 2px solid var(--input-border);
+    border-radius: 7px;
+    margin-bottom: 17px;
+    outline: none;
+    vertical-align: middle;
+    transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.calculateDOB button:hover {
+  background-color: var(--label-color);
+  color: var(--box-bg);
+    border-color: var(--label-color);
+}
+
+#result {
+    font-family: "Fira Mono", "Consolas", monospace;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--label-color);
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#refreshBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #004aad; /* Blue color, adjust if you like */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 74, 173, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+#refreshBtn:hover {
+  background-color: #003370; /* Darker blue on hover */
+}
