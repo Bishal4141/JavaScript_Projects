@@ -1,0 +1,94 @@
+:root {
+  --main-bg: #d5ffe7; /* Background gradient start */
+  --main-bg2: #aaf7a2; /* Background gradient end */
+  --box-bg: #e3fff3; /* Converter box background */
+  --label-color: #009899; /* Left label text color */
+  --box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* Box shadow */
+  --input-bg: #ecf9ecff; /* Input field bg */
+  --input-border: #95dfdfff; /* Input field border */
+  --input-color: #18ae3bff; /* Input text color */
+}
+
+/* Use your own colors below, just overwrite the variables above */
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--main-bg), var(--main-bg2));
+}
+.container {
+  background: var(--box-bg);
+  border-radius: 18px;
+  box-shadow: var(--box-shadow);
+  padding: 36px 34px 25px 34px;
+  width: 430px;
+  max-width: 98vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: "Segoe UI", monospace;
+  font-size: 2.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 32px;
+  margin-top: 0;
+  color: var(--label-color);
+  text-align: center;
+}
+
+.converter {
+  width: 100%;
+}
+
+.converter label {
+  display: inline-block;
+  font-family: "Fira Mono", "Consolas", monospace;
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: var(--label-color);
+  margin-bottom: 17px;
+  margin-right: 18px;
+  width: 160px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.converter .input {
+  width: 205px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-family: "Fira Mono", "Consolas", monospace;
+  font-weight: bold;
+  background-color: var(--input-bg);
+  color: var(--input-color);
+  border: 2px solid var(--input-border);
+  border-radius: 7px;
+  margin-bottom: 17px;
+  outline: none;
+  vertical-align: middle;
+  transition: border-color 0.2s;
+}
+
+.converter .input:focus {
+  border-color: var(--label-color);
+}
+
+/* Arrange label and input pairs inline and stack vertically */
+.converter label,
+.converter .input {
+  min-height: 34px;
+}
+
+.input::placeholder {
+  color: var(--input-color); /* Light gray placeholder text */
+  opacity: 1;
+  font-weight: bold; /* Ensures consistent opacity across browsers */
+}
